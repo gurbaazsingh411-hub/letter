@@ -1,0 +1,26 @@
+.sender {
+  background-color: #ffe6e6; /* light pink */
+  color: #b30000;
+  align-self: flex-end;
+  margin: 8px;
+  padding: 10px 14px;
+  border-radius: 12px 12px 0 12px;
+  max-width: 70%;
+}
+
+.receiver {
+  background-color: #fff0f5; /* soft lavender */
+  color: #660033;
+  align-self: flex-start;
+  margin: 8px;
+  padding: 10px 14px;
+  border-radius: 12px 12px 12px 0;
+  max-width: 70%;
+}
+
+.text {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}

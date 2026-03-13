@@ -1,0 +1,48 @@
+.container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.poemWrapper {
+  max-width: 700px;
+  width: 100%;
+}
+
+.line {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  line-height: 2;
+  color: #2d3436;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.line.visible {
+  opacity: 1; /* Past lines stay fully visible */
+  transform: translateY(0);
+}
+
+.line.active {
+  opacity: 1;
+  color: #c0392b;
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(192, 57, 43, 0.15);
+}
+
+.line.past {
+  opacity: 0.9; /* Very subtle fade if any, but not gray/transparent */
+  transform: scale(1);
+}
+
+@media (max-width: 600px) {
+  .line {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+}

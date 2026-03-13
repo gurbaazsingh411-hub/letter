@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --bg-color: #fffaf0;
+  --primary-color: #ff6b6b;
+  --secondary-color: #ffd1dc;
+  --text-main: #2d3436;
+  --text-romantic: #c0392b;
+  --accent-color: #630d0d;
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 209, 220, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: transparent;
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* Grainy Texture Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+h1 {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 5vw, 2rem);
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 4px 15px rgba(255, 107, 107, 0.1);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
